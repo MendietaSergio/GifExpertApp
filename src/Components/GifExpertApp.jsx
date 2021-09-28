@@ -5,15 +5,15 @@ export const GifExpertApp = () =>{
     // const categories = ['One Puch', 'Samurai X', 'Dragon Ball'];
     const [categories, setCategories ] = useState(['One Puch', 'Samurai X', 'Dragon Ball'])
 
-    const handleAdd = () =>{
-        setCategories([...categories, 'HunterXHunter'])
-        console.log("click");
-    }
+    // const handleAdd = () =>{
+    //     setCategories([...categories, 'HunterXHunter'])
+    //     console.log("click");
+    // }
 
     return(
         <>
             <h2 className="title-h1">GifExpertApp</h2>
-            <AddCategory/>
+            <AddCategory setCategories={setCategories} categories={categories} />
             <hr className="title-linea"/>
             <ol>
                 {
