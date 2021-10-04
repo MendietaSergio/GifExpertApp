@@ -3,7 +3,7 @@ import "./AddCategory.css";
 import PropTypes from 'prop-types';
 
 export const AddCategory = ({setCategories,categories}) => {
-  const [inputValue, setInputValue] = useState("Hola Mundo");
+  const [inputValue, setInputValue] = useState("");
   //para que cambie el valor del input
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -18,10 +18,11 @@ export const AddCategory = ({setCategories,categories}) => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
+      <form onSubmit={handleSubmit} className="my-3">
+        <input className="form-control"
           type="text"
           value={inputValue}
+          placeholder="Buscador..."
           onChange={(e) => handleInputChange(e)}
         />
       </form>
